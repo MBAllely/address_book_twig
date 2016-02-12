@@ -125,17 +125,17 @@ class Contact
     //** Functions **//
     function save()
     {
-        array_push($_SESSION['list_of_contacts'], $this);
+        array_push($_SESSION['contacts'], $this);
     }
 
     static function getAll()
     {
-        return $_SESSION['list_of_contacts'];
+        return $_SESSION['contacts'];
     }
 
     static function deleteAll()
     {
-        $_SESSION['list_of_contacts'] = array();
+        $_SESSION['contacts'] = array();
     }
 }
 

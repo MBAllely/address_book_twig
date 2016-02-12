@@ -4,8 +4,10 @@
 
     session_start();
 
-    if(empty($_SESSION['list_of_contacts'])) {
-        $_SESSION['list_of_contacts'] = array();
+    $mrfox = new Contact("Reynard", '"Mr. Fox"', "The Fox", "5555555555", "reynard@gmail.com", "Hole under the tree", "Ipswitch", "England", "IP1", "http://www.skullsunlimited.com/userfiles/image/red%20fox.jpg");
+
+    if(empty($_SESSION['contacts'])) {
+        $_SESSION['contacts'] = array($mrfox);
     }
 
     $app = new Silex\Application();
