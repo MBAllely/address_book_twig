@@ -114,7 +114,7 @@ class Contact
     //** Functions **//
     function save()
     {
-        array_push('list_of_contacts', $this);
+        array_push($_SESSION['list_of_contacts'], $this);
     }
 
     static function getAll()
