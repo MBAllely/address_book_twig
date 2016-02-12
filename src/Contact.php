@@ -119,7 +119,7 @@ class Contact
 
     static function getAll()
     {
-        return $SESSION['list_of_contacts'];
+        return $_SESSION['list_of_contacts'];
     }
 
     static function deleteAll()
