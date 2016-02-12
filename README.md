@@ -17,7 +17,9 @@ This application allows users to create and delete contacts.  On the home page, 
 * Must be connected to the internet for bootstrap and images to render
 
 ## Known Bugs
-None
+The deleteAll() function is irreversible, unless you clear your cookies.  So be extra doubleplus sure.  But it might be a good idea to clear your cookies anyways.
+
+Also the deleteAll function creates an empty contact that kinda just hangs out even after actual contacts are added but whatever.
 
 ## Support and contact details
 

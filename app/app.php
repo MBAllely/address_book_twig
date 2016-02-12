@@ -2,12 +2,11 @@
     require_once __DIR__."/../vendor/autoload.php";
     require_once __DIR__."/../src/Contact.php";
 
+    session_start();
 
     $mrfox = new Contact("Reynard", '"Mr. Fox"', "The Fox", "5555555555", "reynard@gmail.com", "Hole under the tree", "Ipswitch", "England", "IP1", "https://upload.wikimedia.org/wikipedia/commons/d/d4/Reynard-the-fox.jpg");
     $peter_rabbit = new Contact("Peter", "", "Rabbit", "4444444444", "p-rabbit@potter.com", "Sand Bank", "Under the root of", "the big fir tree", "12345", "https://upload.wikimedia.org/wikipedia/commons/4/41/PeterRabbit8.jpg");
     $mr_toad = new Contact("Mr.", "", "Toad", "3333333333", "wild-ride@windy.com", "Toad Hall", "Suffolk", "England", "12345", "https://upload.wikimedia.org/wikipedia/en/c/c3/E.H._Shepard_illustration_of_Mr_Toad.jpg");
-
-    session_start();
 
     if(empty($_SESSION['contacts'])) {
         $_SESSION['contacts'] = array($mrfox, $peter_rabbit, $mr_toad);
