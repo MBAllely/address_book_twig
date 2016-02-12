@@ -4,16 +4,20 @@ class Contact
     private $first_name;
     private $middle_name;
     private $last_name;
+    private $phone;
+    private $email;
     private $street;
     private $city;
     private $state;
     private $zip;
 
-    function __construct($first_name, $middle_name, $last_name, $street, $city, $state, $zip)
+    function __construct($first_name, $middle_name, $last_name, $phone, $email, $street, $city, $state, $zip)
     {
         $this->first_name = $first_name;
         $this->middle_name = $middle_name;
         $this->last_name = $last_name;
+        $this->phone = $phone;
+        $this->email = $email;
         $this->street = $street;
         $this->city = $city;
         $this->state = $state;
@@ -34,6 +38,16 @@ class Contact
     function setLastName($last_name)
     {
         $this->last_name = $last_name;
+    }
+
+    function setPhone($phone)
+    {
+        $this->phone = $phone;
+    }
+
+    function setEmail($email)
+    {
+        $this->email = $email;
     }
 
     function setStreet($street)
@@ -65,6 +79,16 @@ class Contact
     function getLastName()
     {
         return $this->last_name;
+    }
+
+    function getPhone()
+    {
+        return $this->phone;
+    }
+
+    function getEmail()
+    {
+        return $this->email;
     }
 
     function getStreet()
