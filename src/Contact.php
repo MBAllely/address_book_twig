@@ -10,8 +10,9 @@ class Contact
     private $city;
     private $state;
     private $zip;
+    private $image;
 
-    function __construct($first_name, $middle_name, $last_name, $phone, $email, $street, $city, $state, $zip)
+    function __construct($first_name, $middle_name, $last_name, $phone, $email, $street, $city, $state, $zip, $image)
     {
         $this->first_name = $first_name;
         $this->middle_name = $middle_name;
@@ -22,6 +23,7 @@ class Contact
         $this->city = $city;
         $this->state = $state;
         $this->zip = $zip;
+        $this->image = $image;
     }
 
     //** Setters **//
@@ -63,6 +65,11 @@ class Contact
     function setZip($zip)
     {
         $this->zip = $zip;
+    }
+
+    function setImage($image)
+    {
+        $this->image = $image;
     }
 
     //** Getters **//
@@ -109,6 +116,10 @@ class Contact
     function getZip()
     {
         return $this->zip;
+    }
+    function getImage()
+    {
+        return $this->image;
     }
 
     //** Functions **//

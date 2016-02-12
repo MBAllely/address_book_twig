@@ -47,6 +47,10 @@
                     <label for="zip">Zip: </label>
                     <input id="zip" name="zip" class="form-control" type="text">
                 </div>
+                <div class="form-group"> <!--zip-->
+                    <label for="image">Photo URL: </label>
+                    <input id="image" name="image" class="form-control" type="text">
+                </div>
 
                 <button type="submit" name="button" class="btn btn-primary">Create!</button>
             </form>
@@ -56,11 +60,19 @@
 
             <br>
             <h2>Your Contacts: </h2>
+
             {% for contact in contacts %}
-                <h5>Name: {{ contact.getFirstName }} {{ contact.getMiddleName }} {{ contact.getLastName }}</h5>
-                <h6>Phone number: {{ contact.getPhone }}</h6>
-                <h6>Email address: {{ contact.getEmail }}</h6>
-                <h6>Physical Address: {{ contact.getStreet }}, {{ contact.getCity }}, {{ contact.getState }},  {{ contact.getZip }}</h6>
+            <div class="row">
+                <div class="col-xs-4">
+                    <h5>Name: {{ contact.getFirstName }} {{ contact.getMiddleName }} {{ contact.getLastName }}</h5>
+                    <h6>Phone number: {{ contact.getPhone }}</h6>
+                    <h6>Email address: {{ contact.getEmail }}</h6>
+                    <h6>Physical Address: {{ contact.getStreet }}, {{ contact.getCity }}, {{ contact.getState }},  {{ contact.getZip }}</h6>
+                </div>
+                <div class="col-xs-5">
+                    <img src="{{ contact.getImage }}" alt="{{ contact.getFirstName }} {{ contact.getFirstName }}" />
+                </div>
+            </div>
             {% endfor %}
         </div>
     </body>
