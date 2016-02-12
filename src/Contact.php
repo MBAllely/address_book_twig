@@ -135,7 +135,7 @@ class Contact
 
     static function deleteAll()
     {
-        $_SESSION['contacts'] = array();
+        $_SESSION['contacts'] = array("");
     }
 }
 

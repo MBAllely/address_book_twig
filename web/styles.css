@@ -1,3 +1,17 @@
 img {
     max-width: 250px;
 }
+
+body {
+    background-image: url("http://cdn.pcwallart.com/images/color-gradient-wallpaper-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    margin-top: 2em;
+}
