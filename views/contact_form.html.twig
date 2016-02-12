@@ -59,7 +59,7 @@
             {% for contact in contacts %}
                 <h5>Name: {{ contact.getFirstName }} {{ contact.getMiddleName }} {{ contact.getLastName }}</h5>
                 <h6>Phone number: {{ contact.getPhone }}</h6>
-                <h6>Email address: {{ contactgetEmail }}</h6>
+                <h6>Email address: {{ contact.getEmail }}</h6>
                 <h6>Physical Address: {{ contact.getStreet }}, {{ contact.getCity }}, {{ contact.getState }},  {{ contact.getZip }}</h6>
             {% endfor %}
         </div>
